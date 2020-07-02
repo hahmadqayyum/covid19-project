@@ -33,9 +33,7 @@ jobs:
       uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install 
-    - name: install react-router
-      with:
-        cmd: yarn add react-router-dom  
+
     - name: buildreact app
       run: yarn build
     - name: installing surge
