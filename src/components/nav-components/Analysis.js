@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-import './Analysis.css'
 // https://corona.lmao.ninja/v2/countries
 function Analysis() {
     const [country, setCountry] = useState([{}]);
