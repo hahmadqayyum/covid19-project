@@ -11,14 +11,14 @@ function Home() {
         axios
             .get("https://corona.lmao.ninja/v2/all")
             .then(res => {
-                console.log(res.data)
                 setLatest(res.data);
             })
             .catch(err => {
                 console.log(err);
 
             });
-    }, [])
+    }, []);
+
     return (
         <div className="home">
             <Bar
@@ -29,10 +29,6 @@ function Home() {
                 recovered={latest.recovered}
                 recovermillion={latest.recoveredPerOneMillion}
                 lastupdate={latest.updated} />
-
-
-
-
 
         </div>
     )
