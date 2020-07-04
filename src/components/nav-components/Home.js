@@ -4,6 +4,7 @@ import axios from 'axios'
 
 
 
+
 function Home() {
     const [latest, setLatest] = useState([]);
 
@@ -23,13 +24,10 @@ function Home() {
         <div className="home">
             <Bar
                 value={latest.cases}
-                casesinmillion={latest.casesPerOneMillion}
                 deaths={latest.deaths}
-                deathsmillion={latest.deathsPerOneMillion}
                 recovered={latest.recovered}
-                recovermillion={latest.recoveredPerOneMillion}
                 lastupdate={latest.updated} />
-
+            
         </div>
     )
 }
