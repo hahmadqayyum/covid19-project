@@ -42,7 +42,7 @@ function Analysis() {
         bg="dark"
         text="white"
         className="text-center"
-        style={{ margin: 50 }}
+        style={{ margin: 20 }}
       >
         <Card.Img variant="top" src={data.countryInfo.flag} />
         <Card.Body>
