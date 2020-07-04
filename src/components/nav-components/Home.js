@@ -7,11 +7,13 @@ import axios from 'axios'
 
 function Home() {
     const [latest, setLatest] = useState([]);
+    const [isfetching , setFetching] = useState(false)
 
     useEffect(() => {
         axios
             .get("https://corona.lmao.ninja/v2/all")
             .then(res => {
+                setFetching(true)
                 setLatest(res.data);
             })
             .catch(err => {
@@ -20,6 +22,17 @@ function Home() {
             });
     }, []);
 
+    if (!isfetching) {
+
+        return (
+          <div className="load">
+            <div className="loading">
+              FetchingData
+          </div>
+          </div>
+    
+        )
+      }
     return (
         <div className="home">
             <Bar

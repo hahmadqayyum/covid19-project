@@ -5,8 +5,11 @@ import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns'
 import CountUp from 'react-countup'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './loading.css'
+
 // https://corona.lmao.ninja/v2/countries
 function Analysis() {
+  const [isfetching, setFetching] = useState(false)
   const [country, setCountry] = useState([]);
 
   // function tominute() {
@@ -18,8 +21,10 @@ function Analysis() {
     axios
       .get("https://corona.lmao.ninja/v2/countries")
       .then(res => {
+        setFetching(true)
         console.log(res.data)
         setCountry(res.data);
+
       })
       .catch(err => {
         console.log(err);
@@ -62,9 +67,21 @@ function Analysis() {
     )
   })
 
+  if (!isfetching) {
+
+    return (
+      <div className="load">
+        <div className="loading">
+          FetchingData
+      </div>
+      </div>
+
+    )
+  }
+
   return (
 
-    <div className="card" style={{backgroundColor: '#333333'}}>
+    <div className="card" style={{ backgroundColor: '#333333' }}>
       <CardColumns>
         {countries}
       </CardColumns>
@@ -72,4 +89,5 @@ function Analysis() {
 
   )
 }
+
 export default Analysis;

@@ -3,12 +3,13 @@ import './Bar.css'
 
 
 function Bar(prop) {
-
+   
     function tominute() {
         let minute = new Date();
         let m = minute.getMinutes();
         return m;
     }
+    
     return (
         <div className="bar-wrapper">
             <div className="bar">

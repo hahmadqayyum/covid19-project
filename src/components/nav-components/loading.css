@@ -1,0 +1,35 @@
+.load{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+
+}
+.loading{ 
+    color: white; 
+    display: block;
+    width:200px;
+    text-align: center;
+    padding-top:  84px;
+     height: 200px;
+     background-color: #333333;
+     border: none;
+      border-radius: 5px;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .loading {
+      animation: loading-spin infinite 1.5s forwards;
+    }
+  }
+  
+  
+  
+  @keyframes loading-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
