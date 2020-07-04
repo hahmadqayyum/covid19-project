@@ -1,6 +1,6 @@
 import React from 'react';
 import './Bar.css'
-import CountUp from 'react-countup'
+
 
 function Bar(prop) {
 
