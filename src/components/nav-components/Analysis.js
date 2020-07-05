@@ -51,13 +51,14 @@ function Analysis() {
       >
         <Card.Img variant="top" src={data.countryInfo.flag} />
         <Card.Body>
-          <Card.Title>{data.country}</Card.Title>
+          <Card.Title style={{textShadow: '0 0 10px white, 0 0 1000px white, 0 0 100px white'}}>{data.country}</Card.Title>
           <Card.Text style={{ color: 'rgb(140, 140, 211)' }}>Confirmed <CountUp start={0} end={data.cases} duration={2} separator="," /></Card.Text>
           <Card.Text style={{ color: 'rgba(240, 35, 35, 0.76)' }}>Deaths <CountUp start={0} end={data.deaths} duration={2} separator="," /></Card.Text>
-          <Card.Text style={{ color: 'rgb(147, 224, 32)' }}>Recovered <CountUp start={0} end={data.recovered} duration={2} separator="," /></Card.Text>
-          <Card.Text style={{ color: 'whitesmoke' }}>Today Reported <CountUp start={0} end={data.todayCases} duration={2} separator="," /></Card.Text>
-          <Card.Text style={{ color: 'whitesmoke' }}>Today Deaths <CountUp start={0} end={data.todayDeaths} duration={2} separator="," /></Card.Text>
-          <Card.Text style={{ color: 'whitesmoke' }}>Today Cured <CountUp start={0} end={data.todayRecovered} duration={2} separator="," /></Card.Text>
+          <Card.Text style={{ color: 'rgb(147, 224, 32)' }}>Cured <CountUp start={0} end={data.recovered} duration={2} separator="," /></Card.Text>
+          <Card.Title><h5>Today's Stats</h5></Card.Title>
+          <Card.Text style={{ color: 'rgb(140, 140, 211)' }}><h5>Reported <CountUp start={0} end={data.todayCases} duration={2} separator="," /></h5></Card.Text>
+          <Card.Text style={{ color: 'rgba(240, 35, 35, 0.76)' }}><h5>Deaths <CountUp start={0} end={data.todayDeaths} duration={2} separator="," /></h5></Card.Text>
+          <Card.Text style={{ color: 'rgb(147, 224, 32)',  }}><h5>Cured <CountUp start={0} end={data.todayRecovered} duration={2} separator="," /></h5></Card.Text>
 
         </Card.Body>
         <Card.Footer>

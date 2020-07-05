@@ -3,21 +3,21 @@ import './Bar.css'
 
 
 function Bar(prop) {
-   
+
     function tominute() {
         let minute = new Date();
         let m = minute.getMinutes();
         return m;
     }
-    
+
     return (
         <div className="bar-wrapper">
             <div className="bar">
                 <div className="confirmed">
                     <h1>Confirmed</h1>
+
                     <p>{prop.value}</p>
 
-                    
                     <h4>{tominute(prop.lastupdate)} min ago</h4>
                 </div>
 
@@ -25,7 +25,7 @@ function Bar(prop) {
                 <div className="deaths">
                     <h1>Deaths</h1>
                     <p>{prop.deaths}</p>
-                    
+
                     <h4>{tominute(prop.lastupdate)} min ago</h4>
                 </div>
                 <div className="recovered">
@@ -37,7 +37,7 @@ function Bar(prop) {
 
 
             </div>
-        </div>
+        </div >
     )
 }
 export default Bar;
