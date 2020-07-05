@@ -18,7 +18,7 @@ function Bar(prop) {
 
                     <p>{prop.value}</p>
 
-                    <h4>{tominute(prop.lastupdate)} min ago</h4>
+                    <h6>{tominute(prop.lastupdate)} min ago</h6>
                 </div>
 
 
@@ -26,13 +26,13 @@ function Bar(prop) {
                     <h1>Deaths</h1>
                     <p>{prop.deaths}</p>
 
-                    <h4>{tominute(prop.lastupdate)} min ago</h4>
+                    <h6>{tominute(prop.lastupdate)} min ago</h6>
                 </div>
                 <div className="recovered">
                     <h1>Recovered</h1>
                     <p>{prop.recovered}</p>
 
-                    <h4>{tominute(prop.lastupdate)} min ago</h4>
+                    <h6>{tominute(prop.lastupdate)} min ago</h6>
                 </div>
 
 
