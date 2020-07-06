@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { Doughnut } from 'react-chartjs-2'
+import { Pie } from 'react-chartjs-2'
 
 
 const Chart = (prop) => {
@@ -9,7 +9,7 @@ const Chart = (prop) => {
 
 
 	const data = {
-		labels: ['Deaths', 'Confirmed', 'Cured', ],
+		labels: ['Total Deaths', 'Total Confirmed', 'Total Cured', ],
 		datasets: [
 			{
 				label: 'Cases',
@@ -27,7 +27,7 @@ const Chart = (prop) => {
 				],
 				data: [
 					prop.deaths,
-					prop.value,
+					prop.cases,
 					prop.recovered,
 				],
 
@@ -38,20 +38,16 @@ const Chart = (prop) => {
 
 	return (
 
-		<div className="world-convas" style={{ width: '50%', height: '50%' }}>
+		<div className="world-convas" style={{ width: '100%', height: '100%' }}>
 
-			<Doughnut
-				data={data}
-				options={{
-					title: {
-						display: true,
-						fontSize: 25
-					},
-					legend: {
-						display: true,
-						position: 'right',
-					}
-				}}
+			<Pie
+                data={data}
+                options={{
+                    legend:{
+                        display: true,
+                        position: 'right'
+                    }
+                }}
 			/>
 		</div>
 

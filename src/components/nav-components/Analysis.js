@@ -8,6 +8,7 @@ import CountUp from 'react-countup'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './loading.css'
 import Accordion from 'react-bootstrap/Accordion'
+import ChartAnalysis from '../Chart/ChartAnalysis'
 // https://corona.lmao.ninja/v2/countries
 function Analysis() {
   const [isfetching, setFetching] = useState(false)
@@ -71,20 +72,26 @@ function Analysis() {
           </Card.Body>
 
           <Card.Footer>
-          <Accordion >
-            <Card
-              bg="dark"
-              text="white"
-              className="text-center"
-            >
-              <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
-                <Button variant="info" style={{width: '100%'}}>Statistics</Button>
-              </Accordion.Toggle>
+            <Accordion >
+              <Card
+                bg="dark"
+                text="white"
+                className="text-center"
+              >
+                <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
+                  <Button variant="info" style={{ width: '100%' }}>Statistics</Button>
+                </Accordion.Toggle>
 
-              <Accordion.Collapse eventKey="0">
-                <Card.Body>Hello! I'm the body</Card.Body>
-              </Accordion.Collapse>
-            </Card>
+                <Accordion.Collapse eventKey="0">
+                  <Card.Body>
+                    <ChartAnalysis
+                      cases={data.cases}
+                      deaths={data.deaths}
+                      recovered={data.recovered}
+
+                    /></Card.Body>
+                </Accordion.Collapse>
+              </Card>
             </Accordion>
           </Card.Footer>
         </Card>
