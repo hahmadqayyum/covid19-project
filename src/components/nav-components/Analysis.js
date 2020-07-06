@@ -3,16 +3,25 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns'
+import Button from 'react-bootstrap/Button'
 import CountUp from 'react-countup'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './loading.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import Countrystats from './Countrystats'
+import Modal from "react-bootstrap/Modal";
 // https://corona.lmao.ninja/v2/countries
 function Analysis() {
   const [isfetching, setFetching] = useState(false)
   const [country, setCountry] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+
+  const showModal = () => {
+    setIsOpen(true);
+  };
+
+  const hideModal = () => {
+    setIsOpen(false);
+  };
 
   // function tominute() {
   //   let minute = new Date();
@@ -36,6 +45,7 @@ function Analysis() {
 
 
 
+
   // function tominute() {
   //   let minute = new Date();
   //   let m = minute.getMinutes();
@@ -43,6 +53,9 @@ function Analysis() {
   // }
 
   const countries = country.map((data, ind) => {
+
+
+
     return (
       <Card
         key={ind}
@@ -63,8 +76,9 @@ function Analysis() {
           <Card.Text style={{ color: 'rgb(147, 224, 32)', }}><h5>Cured <CountUp start={0} end={data.todayRecovered} duration={2} separator="," /></h5></Card.Text>
 
         </Card.Body>
+
         <Card.Footer>
-          <Link to="/Countrystats"><small>Stay Home Stay Safe</small></Link>
+          <Button variant="primary" onClick={showModal} >See Stats</Button>
         </Card.Footer>
       </Card>
     )
@@ -85,16 +99,34 @@ function Analysis() {
   return (
 
     <div className="card" style={{ backgroundColor: '#3f3c3c' }}>
-      <Router>
-        <CardColumns>
-          {countries}
-        </CardColumns>
-        <Switch>
-          <Route path="/Countrystats" exact component={Countrystats} />
+      <CardColumns>
+        {countries}
+      </CardColumns>
 
-
-        </Switch>
-      </Router>
+      <Modal
+        show={isOpen}
+        onHide={hideModal}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Modal heading
+        </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>Centered Modal</h4>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+            consectetur ac, vestibulum at eros.
+        </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={hideModal}>Close</Button>
+        </Modal.Footer>
+      </Modal>
 
     </div>
 
