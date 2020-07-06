@@ -56,7 +56,7 @@ h6{
 
 @media (max-width:500px){
     body{
-        background-color: whitesmoke;
+        background-color: #3f3c3c;
     }
     .bar-wrapper{
         display: flex;

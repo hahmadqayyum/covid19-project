@@ -104,7 +104,7 @@ function Analysis() {
     return (
       <div className="load">
         <div className="loading">
-          FetchingData
+          
       </div>
       </div>
 

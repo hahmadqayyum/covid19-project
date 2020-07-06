@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Bar from './Bars'
 import axios from 'axios'
 import Chart from '../Chart/Chart'
+import './home.css'
 
 
 
@@ -27,7 +28,6 @@ function Home() {
         return (
             <div className="load">
                 <div className="loading">
-                    FetchingData
           </div>
             </div>
 
@@ -43,7 +43,7 @@ function Home() {
                 todayC={latest.todayCases}
                 todayD={latest.todayDeaths}
                 todayR={latest.todayRecovered} />
-            <div>
+            <div className="chart">
                 <Chart value={latest.cases}
                     deaths={latest.deaths}
                     recovered={latest.recovered}

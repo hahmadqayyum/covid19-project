@@ -1,0 +1,7 @@
+@media (max-width:500px){
+    .chart{
+        display: flex;
+        width: 200%;
+        height: 200%;
+    }
+}
