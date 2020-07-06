@@ -1,0 +1,31 @@
+.nav{
+    margin-top: 20%;
+}
+.nav{
+    display: flex;
+    
+    position: static;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    
+
+}
+.links{
+    color: white;
+    text-emphasis:100px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  @media (max-width: 500px){
+      .nav{
+          margin-top:30% ;
+      }
+      .links{
+          display: flex;
+          flex-direction: column;
+      }
+  }
