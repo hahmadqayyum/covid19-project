@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Bar from './Bars'
 import axios from 'axios'
-
+import Chart from '../Chart/Chart'
 
 
 
 function Home() {
     const [latest, setLatest] = useState([]);
-    const [isfetching , setFetching] = useState(false)
+    const [isfetching, setFetching] = useState(false)
 
     useEffect(() => {
         axios
@@ -25,14 +25,14 @@ function Home() {
     if (!isfetching) {
 
         return (
-          <div className="load">
-            <div className="loading">
-              FetchingData
+            <div className="load">
+                <div className="loading">
+                    FetchingData
           </div>
-          </div>
-    
+            </div>
+
         )
-      }
+    }
     return (
         <div className="home">
             <Bar
@@ -40,7 +40,15 @@ function Home() {
                 deaths={latest.deaths}
                 recovered={latest.recovered}
                 lastupdate={latest.updated} />
-            
+            <div>
+                <Chart value={latest.cases}
+                    deaths={latest.deaths}
+                    recovered={latest.recovered}
+                    todayC= {latest.todayCases}
+                    todayD= {latest.todayDeaths}
+                    todayR= {latest.todayRecovered}
+                />
+            </div>
         </div>
     )
 }

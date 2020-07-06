@@ -1,3 +1,68 @@
+import React from 'react'
+
+
+import { Doughnut } from 'react-chartjs-2'
+
+
+const Chart = (prop) => {
+
+
+
+	const data = {
+		labels: ['Deaths', 'Confirmed', 'Cured', ],
+		datasets: [
+			{
+				label: 'Cases',
+				backgroundColor: [
+					'#B21F00',
+					'#C9DE00',
+					'#2FDE00',
+					
+				],
+				hoverBackgroundColor: [
+					'#501800',
+					'#4B5000',
+					'#175000',
+					
+				],
+				data: [
+					prop.deaths,
+					prop.value,
+					prop.recovered,
+				],
+
+			}
+		]
+	}
+
+
+	return (
+
+		<div className="world-convas" style={{ width: '50%', height: '50%' }}>
+
+			<Doughnut
+				data={data}
+				options={{
+					title: {
+						display: true,
+						fontSize: 25
+					},
+					legend: {
+						display: true,
+						position: 'right',
+					}
+				}}
+			/>
+		</div>
+
+	)
+}
+
+export default Chart
+
+
+
+
 
 
 
