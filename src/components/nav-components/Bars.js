@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import CountUp from 'react-countup';
+
 
 
 
@@ -60,11 +60,11 @@ function Bar(prop) {
                             {prop.value}
                         </Typography>
                         <Typography className={classes.title2} color="textSecondary" gutterBottom>
-                        Today Reported
+                            Today Reported
         </Typography>
-                        <Typography variant="p" component="h5" style={{color: 'white', textAlign: "center"}}>
-                        {prop.todayC}
-                </Typography>
+                        <Typography variant="p" component="h5" style={{ color: 'white', textAlign: "center" }}>
+                            {prop.todayC}
+                        </Typography>
                         <hr />
                         <Typography variant="p" component="h5" className={classes.date} >
                             {tominute(prop.lastupdate)} min ago
@@ -82,11 +82,11 @@ function Bar(prop) {
                             {prop.recovered}
                         </Typography>
                         <Typography className={classes.title2} color="textSecondary" gutterBottom>
-                        Today Recovered
+                            Today Recovered
         </Typography>
-                        <Typography variant="p" component="h5" style={{color: 'white', textAlign: "center"}}>
-                        {prop.todayR}
-                </Typography>
+                        <Typography variant="p" component="h5" style={{ color: 'white', textAlign: "center" }}>
+                            {prop.todayR}
+                        </Typography>
                         <hr />
                         <Typography variant="p" component="h5" className={classes.date} >
                             {tominute(prop.lastupdate)} min ago
@@ -102,11 +102,11 @@ function Bar(prop) {
                             {prop.deaths}
                         </Typography>
                         <Typography className={classes.title2} color="textSecondary" gutterBottom>
-                        Today Deaths
+                            Today Deaths
         </Typography>
-                        <Typography variant="p" component="h5" style={{color: 'white', textAlign: "center"}}>
-                        {prop.todayD}
-                </Typography>
+                        <Typography variant="p" component="h5" style={{ color: 'white', textAlign: "center" }}>
+                            {prop.todayD}
+                        </Typography>
                         <hr />
                         <Typography variant="p" component="h5" className={classes.date}>
                             {tominute(prop.lastupdate)} min ago

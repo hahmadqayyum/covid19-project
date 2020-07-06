@@ -84,7 +84,7 @@ function Analysis() {
 
   return (
 
-    <div className="card" style={{ backgroundColor: '#333333' }}>
+    <div className="card" style={{ backgroundColor: '#3f3c3c' }}>
       <Router>
         <CardColumns>
           {countries}
