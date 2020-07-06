@@ -39,14 +39,15 @@ function Home() {
                 value={latest.cases}
                 deaths={latest.deaths}
                 recovered={latest.recovered}
-                lastupdate={latest.updated} />
+                lastupdate={latest.updated}
+                todayC={latest.todayCases}
+                todayD={latest.todayDeaths}
+                todayR={latest.todayRecovered} />
             <div>
                 <Chart value={latest.cases}
                     deaths={latest.deaths}
                     recovered={latest.recovered}
-                    todayC= {latest.todayCases}
-                    todayD= {latest.todayDeaths}
-                    todayR= {latest.todayRecovered}
+
                 />
             </div>
         </div>

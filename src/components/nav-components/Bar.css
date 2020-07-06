@@ -1,11 +1,13 @@
-
+body{
+    background-color: #3f3c3c;
+}
 .bar-wrapper{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    background-color: #333333;
+    
     border-top: 1pt solid white;
 }
 .bar{
