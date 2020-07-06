@@ -62,11 +62,11 @@ function Bar(prop) {
                         <Typography className={classes.title2} color="textSecondary" gutterBottom>
                             Today Reported
         </Typography>
-                        <Typography variant="p" component="h5" style={{ color: 'white', textAlign: "center" }}>
+                        <Typography variant="h5" component="h2" style={{ color: 'white', textAlign: "center" }}>
                             {prop.todayC}
                         </Typography>
                         <hr />
-                        <Typography variant="p" component="h5" className={classes.date} >
+                        <Typography variant="h5" component="h2" className={classes.date} >
                             {tominute(prop.lastupdate)} min ago
                 </Typography>
                     </CardContent>
@@ -84,11 +84,11 @@ function Bar(prop) {
                         <Typography className={classes.title2} color="textSecondary" gutterBottom>
                             Today Recovered
         </Typography>
-                        <Typography variant="p" component="h5" style={{ color: 'white', textAlign: "center" }}>
+                        <Typography variant="h5" component="h2" style={{ color: 'white', textAlign: "center" }}>
                             {prop.todayR}
                         </Typography>
                         <hr />
-                        <Typography variant="p" component="h5" className={classes.date} >
+                        <Typography variant="h5" component="h2" className={classes.date} >
                             {tominute(prop.lastupdate)} min ago
                 </Typography>
                     </CardContent>
@@ -104,11 +104,11 @@ function Bar(prop) {
                         <Typography className={classes.title2} color="textSecondary" gutterBottom>
                             Today Deaths
         </Typography>
-                        <Typography variant="p" component="h5" style={{ color: 'white', textAlign: "center" }}>
+                        <Typography variant="h5" component="h2" style={{ color: 'white', textAlign: "center" }}>
                             {prop.todayD}
                         </Typography>
                         <hr />
-                        <Typography variant="p" component="h5" className={classes.date}>
+                        <Typography variant="h5" component="h2" className={classes.date}>
                             {tominute(prop.lastupdate)} min ago
                 </Typography>
                     </CardContent>

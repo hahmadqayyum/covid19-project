@@ -26,7 +26,7 @@ function Analysis() {
       .get("https://corona.lmao.ninja/v2/countries")
       .then(res => {
         setFetching(true)
-        console.log(res.data)
+
         setCountry(res.data);
 
       })
@@ -113,7 +113,10 @@ function Analysis() {
 
   return (
 
-    <div className="card" style={{ backgroundColor: '#3f3c3c' }}>
+    <div className="card" style={{ backgroundColor: '#3f3c3c', paddingTop: '10px', alignContent: 'center' }}>
+      <div className="input-div" >
+      <input type="text" placeholder="Country"/>
+      </div>
       <CardColumns>
         {countries}
       </CardColumns>
