@@ -27,6 +27,7 @@ input{
   font-size: 20px;
   font-family: sans-serif;
   color: #333333;
+  padding-left: 4px;
 }
 .input-div{
   display: flex;
