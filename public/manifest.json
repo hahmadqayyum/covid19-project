@@ -9,12 +9,12 @@
     },
     {
       "src": "covid-logo.svg",
-      "type": "image/svg",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
       "src": "covid-logo.svg",
-      "type": "image/svg",
+      "type": "image/pnd",
       "sizes": "512x512"
     }
   ],

@@ -20,12 +20,3 @@
     align-items: center;
     list-style: none;
   }
-  @media (max-width: 500px){
-      .nav{
-          margin-top:30% ;
-      }
-      .links{
-          display: flex;
-          flex-direction: column;
-      }
-  }
