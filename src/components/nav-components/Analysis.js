@@ -13,7 +13,7 @@ import ChartAnalysis from '../Chart/ChartAnalysis'
 function Analysis() {
   const [isfetching, setFetching] = useState(false)
   const [country, setCountry] = useState([]);
-
+  const [searchCountry, setsearchCountry] = useState("")
 
 
   // function tominute() {
@@ -36,16 +36,16 @@ function Analysis() {
       });
   }, []);
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
 
+  const filtercountry = country.filter(item => {
+    return searchCountry !== "" ? item.country.includes(capitalizeFirstLetter(searchCountry)) : item
+  })
 
-  // function tominute() {
-  //   let minute = new Date();
-  //   let m = minute.getMinutes();
-  //   return m;
-  // }
-
-  const countries = country.map((data, ind) => {
+  const countries = filtercountry.map((data, ind) => {
 
 
 
@@ -104,8 +104,8 @@ function Analysis() {
     return (
       <div className="load">
         <div className="loading">
-          
-      </div>
+
+        </div>
       </div>
 
     )
@@ -113,9 +113,9 @@ function Analysis() {
 
   return (
 
-    <div className="card" style={{ backgroundColor: '#3f3c3c', paddingTop: '10px', alignContent: 'center' }}>
+    <div className="card" style={{ backgroundColor: '#3f3c3c', paddingTop: '10px', paddingRight: '10px', alignContent: 'center' }}>
       <div className="input-div" >
-      <input type="text" placeholder="Country"/>
+        <input type="text" placeholder="Country" onChange={e => setsearchCountry(e.target.value)} />
       </div>
       <CardColumns>
         {countries}
