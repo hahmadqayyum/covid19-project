@@ -38,7 +38,7 @@ const Chart = (prop) => {
 
 	return (
 
-		<div className="world-convas">
+		<div className="world-convas" style={{ width: '50%', height: '50%' }}>
 
 			<Doughnut
 				data={data}
@@ -48,7 +48,7 @@ const Chart = (prop) => {
 						fontSize: 25
 					},
 					legend: {
-						display: false,
+						display: true,
 						position: 'right',
 					}
 				}}
