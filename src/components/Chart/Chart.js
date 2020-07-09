@@ -38,14 +38,18 @@ const Chart = (prop) => {
 
 	return (
 
-		<div className="world-convas" style={{ width: '50%', height: '50%' }}>
+		<div className="world-convas">
 
 			<Doughnut
 				data={data}
 				options={{
+					title: {
+						display: true,
+						fontSize: 25
+					},
 					legend: {
 						display: false,
-						position: 'none',
+						position: 'right',
 					}
 				}}
 			/>
