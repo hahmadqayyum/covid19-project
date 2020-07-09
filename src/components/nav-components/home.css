@@ -1,7 +1,22 @@
 @media (max-width:500px){
-    .chart{
+    .chart-wrapper{
         display: flex;
-        width: 200%;
-        height: 200%;
+        justify-content: space-around;
+        align-items: center;
+     
+        
     }
+     .chart{
+         padding: 20px;
+         padding-left: 85px;
+         display: block;
+         justify-content: space-around;
+         align-items: center;
+         width: 100%;
+     
+     }
+Chart{
+    width: 200px;
+    height: 200px;
 }
+    }

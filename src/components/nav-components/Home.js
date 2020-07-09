@@ -28,7 +28,7 @@ function Home() {
         return (
             <div className="load">
                 <div className="loading">
-          </div>
+                </div>
             </div>
 
         )
@@ -43,12 +43,15 @@ function Home() {
                 todayC={latest.todayCases}
                 todayD={latest.todayDeaths}
                 todayR={latest.todayRecovered} />
-            <div className="chart">
-                <Chart value={latest.cases}
-                    deaths={latest.deaths}
-                    recovered={latest.recovered}
+            <div className="chart-wrapper">
+                <div className="chart">
+                    <Chart value={latest.cases}
+                        deaths={latest.deaths}
+                        recovered={latest.recovered}
+                        
 
-                />
+                    />
+                </div>
             </div>
         </div>
     )

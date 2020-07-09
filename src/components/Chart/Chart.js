@@ -43,13 +43,9 @@ const Chart = (prop) => {
 			<Doughnut
 				data={data}
 				options={{
-					title: {
-						display: true,
-						fontSize: 25
-					},
 					legend: {
-						display: true,
-						position: 'right',
+						display: false,
+						position: 'none',
 					}
 				}}
 			/>
